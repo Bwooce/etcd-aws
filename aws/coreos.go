@@ -14,6 +14,7 @@ var AMI = cfn.FindInMap("CoreOSAMI", cfn.Ref("AWS::Region").String(), Arch)
 func MakeMapping(parameters *Parameters, t *cfn.Template) error {
 	t.Mappings["VirtType"] = &cfn.Mapping{
 		"t1.micro":    map[string]string{"64": "pv"},
+        "t2.nano":     map[string]string{"64": "hvm"},
 		"t2.micro":    map[string]string{"64": "hvm"},
 		"t2.small":    map[string]string{"64": "hvm"},
 		"t2.medium":   map[string]string{"64": "hvm"},

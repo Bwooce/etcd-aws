@@ -18,7 +18,7 @@ func Main() error {
 	application := flag.String("app", "", "The name of the application")
 	dnsName := flag.String("dns-name", "myapp.example.com", "The top level DNS name of the cluster.")
 	keyPair := flag.String("key-pair", "", "the name of the EC2 SSH keypair to use")
-	instanceType := flag.String("instance-type", "t1.micro",
+	instanceType := flag.String("instance-type", "t2.nano",
 		"The type of instance to use for master instances.")
 	stackName := flag.String("stack", "", "The name of the CloudFormation stack. The default is derived from the DNS name.")
 	doDryRun := flag.Bool("dry-run", false, "just print the cloudformation template, don't deploy it.")
